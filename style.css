@@ -1,0 +1,319 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body, html {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    color: rgba(0, 0, 0, .6);
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+    background-color: #f1f1f1;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* start: top bar */
+.top-bar {
+    background-color: #2C3E50;
+    color: white;
+}
+
+.logo {
+    display: block;
+    text-align: center;
+    padding: 11px 0;
+}
+
+.nav-top-bar {
+    text-align: center;
+    padding-bottom: 16px;
+    line-height: 2;
+}
+
+.nav-top-bar a {
+    display: inline-block;
+    margin: 0 12px;
+    color: rgba(255, 255, 255, .67);
+    transition: color .3s;
+}
+
+.nav-top-bar a:hover, .nav-top-bar a.active {
+    color: white;
+}
+/* end: top bar */
+
+/* start: container */
+.container {
+    padding: 0 20px;
+    max-width: 1080px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.site {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.main {
+    margin-bottom: 20px;
+}
+/* end: container */
+
+/* start: sidebar */
+.sidebar {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+.sidebar a {
+    display: block;
+    width: 50%;
+    padding: 0.6em 0;
+    transition: .3s;
+    border: solid 1px transparent;
+    padding-left: 10px;
+}
+
+.sidebar a::before {
+    content: '';
+    display: inline-block;
+    width: 11px;
+    height: 9px;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 20px;
+    opacity: .67;
+    transition: opacity .3s;
+    background: url(img/icon-house.svg) center center / contain no-repeat;
+}
+
+.sidebar .sidebar-enveloppe::before {
+    background-image: url(img/icon-envelope.svg) ;
+}
+
+.sidebar .sidebar-calandar::before {
+    background-image: url(img/icon-calandar.svg) ;
+}
+
+.sidebar .sidebar-user::before {
+    background-image: url(img/icon-user.svg) ;
+}
+
+.sidebar a.active, .sidebar a:hover {
+    color: black;
+    border: solid 1px #DBDBDB;
+    background: white;
+    border-radius: 5px;
+    font-weight: 700;
+}
+
+.sidebar a.active::before, .sidebar a:hover::before {
+    opacity: 1;
+}
+/* end: sidebar */
+
+.main {
+    position: relative;
+    background-color: rgba(241, 241, 241, 1);
+}
+
+/* start: post */
+.post {
+    background-color: white;
+    border: 1px solid #DBDBDB;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.post:last-child {
+    margin-bottom: 0;
+}
+
+.top-post {
+    padding: 10px;
+    position: relative; 
+}
+
+.top-post-avatar {
+    padding-left: 65px;
+}
+
+.post-avatar {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 10px;
+    border-radius: 50%;
+}
+.name-title-post {
+    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.time-post {
+    color: rgba(0, 0, 0, 0.38);
+    font-size: 12px;
+}
+
+.comment-post p:first-child {
+    margin-top: 0;
+}
+
+.comment-post p:last-child {
+    margin-bottom: 0;
+}
+
+.comment-post {
+    padding: 0 10px 10px 10px;
+}
+
+.post-img {
+    width: calc(100% + 20px);
+    display: block;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.footer-post {
+    border-top: solid 1px #DBDBDB;
+    background: #FBFBFB;
+    display: flex;
+    padding: 10px 10px;
+    font-size: 12px;
+    color: #DBDBDB;
+}
+
+.like::before, .comment::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    width: 20px;
+    height: 20px;
+    background: url(img/icon-thumb.svg) center center / 20px 18px no-repeat;
+}
+
+.comment::before {
+    background: url(img/icon-post.svg) center center / 18px 18px no-repeat;
+}
+
+.comment {
+    margin-left: auto;
+}
+/* end: post */
+
+/* start: suggestion */
+.profil {
+    display: none;
+}
+
+.title-suggestion {
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.87);
+    margin-top: 15px;
+    margin-bottom: 18px;
+}
+
+.title-suggestion::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: black;
+    margin-top: 4px;
+}
+
+.recommendation {
+    display: flex;
+    margin: 14px 0;
+} 
+
+.body-friends {
+    display: flex;
+    flex-direction: column; 
+}
+
+.recommendation-friends {
+    width: 73px;
+    height: 73px;
+    flex: none;
+    margin-right: 10px;
+}
+
+.name-recommendation {
+    display: block;
+    font-weight: 700;
+    color: black;
+    font-size: 15px;
+}
+
+.add-friends {
+    font-size: 12px;
+    color: black;
+    margin-top: auto;
+}
+
+.add-friends::before {
+    content: '';
+    display: inline-block;
+    width: 18px;
+    height: 12px;
+    margin-right: 5px;
+    transform: translateY(-1px);
+    vertical-align: middle;
+    background: url(img/icon-add-friends.png) center center / 18px 12px no-repeat;
+}
+/* end: suggestion */
+
+/* start: media queries */
+@media only screen and (min-width:1050px) {
+    .site {
+        display: flex;
+    }
+    .profil {
+        display: block;
+    }
+    .sidebar {
+        display: block;
+        flex: none;
+        width: 180px;
+    }
+    .sidebar a {
+        width: 100%;
+    }
+    .main {
+        width: 100%;
+        margin-left: 30px;
+        margin-right: 30px;
+    }
+    .suggestion {
+        flex: none;
+        width: 310px;
+    }
+}
+
+@media only screen and (min-width:520px) {
+    .top-bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 64px;
+        padding: 0 25px;
+    }
+    .logo, .nav-top-bar {
+        padding: 0;
+    }
+    .nav-top-bar a {
+        margin: 0 20px;
+    }
+}
+/* end: media queries */
